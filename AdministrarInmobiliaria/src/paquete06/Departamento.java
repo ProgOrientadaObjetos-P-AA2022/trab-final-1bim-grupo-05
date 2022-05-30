@@ -22,8 +22,8 @@ public class Departamento {
     String barrio;
     String referencia;
     String ciudad;
-    String edificio;
-    String ubicacion;
+  
+
     String provincia;
     
     double precioMetro;

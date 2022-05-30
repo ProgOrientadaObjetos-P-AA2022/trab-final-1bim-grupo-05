@@ -34,6 +34,8 @@ public class Casa {
     double cuotaMensual;
     int numeroCuartos;
 
+    
+    
     Propietario pro = new Propietario(propietario, apellidos, identificacion);
     Barrio bar = new Barrio(barrio, referencia);
     Ciudad ciu = new Ciudad(ciudad, provincia);
