@@ -15,10 +15,10 @@ public class Propietario {
     private String identificacion;
     private String apellidos;
    
-    public Propietario(String a, String s, String d) {
-        nombrePropietario = a;
-        apellidos = s;
-        identificacion = d;
+    public Propietario(String p, String a, String i) {
+        nombrePropietario = p;
+        apellidos = a;
+        identificacion = i;
     }
 
     public void establecerNombre(String n) {

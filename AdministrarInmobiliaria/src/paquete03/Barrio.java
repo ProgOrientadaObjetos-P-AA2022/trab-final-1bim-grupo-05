@@ -10,5 +10,32 @@ package paquete03;
  * @author reroes
  */
 public class Barrio {
+    private String nombre_Barrio;
+    private String referencia;
+    
+   
+    public Barrio(String a, String s) {
+        nombre_Barrio = a;
+        referencia = s;
+        
+    }
+
+    public void establecerNombreBarrio(String n) {
+        nombre_Barrio = n;
+    }
+
+    public void establecerReferencia(String n) {
+        referencia = n;
+    }
+
+    
+    public String obtenerNombreBarrio() {
+        return nombre_Barrio;
+    }
+
+    public String obtenerReferencia() {
+        return referencia;
+    }
+
     
 }
