@@ -5,37 +5,45 @@
  */
 package paquete03;
 
+import java.io.Serializable;
+
 /**
  *
  * @author reroes
  */
-public class Barrio {
+public class Barrio implements Serializable{
     private String nombre_Barrio;
     private String referencia;
-    
-   
-    public Barrio(String a, String s) {
-        nombre_Barrio = a;
-        referencia = s;
-        
+
+    public Barrio(String nombre_Barrio, String referencia) {
+        this.nombre_Barrio = nombre_Barrio;
+        this.referencia = referencia;
     }
 
-    public void establecerNombreBarrio(String n) {
-        nombre_Barrio = n;
-    }
-
-    public void establecerReferencia(String n) {
-        referencia = n;
-    }
-
-    
-    public String obtenerNombreBarrio() {
+    public String getNombre_Barrio() {
         return nombre_Barrio;
     }
 
-    public String obtenerReferencia() {
+    public void setNombre_Barrio(String nombre_Barrio) {
+        this.nombre_Barrio = nombre_Barrio;
+    }
+
+    public String getReferencia() {
         return referencia;
     }
 
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
+    }
+
     
+   
+
+    @Override
+    public String toString(){
+        String b="Barrio";
+        b=String.format("%s\n Nombre:%s\n Referencia: %s\n", 
+                b,getNombre_Barrio(), getReferencia());
+        return b;
+    }
 }

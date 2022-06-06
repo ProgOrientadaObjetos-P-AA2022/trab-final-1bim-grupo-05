@@ -5,18 +5,22 @@
  */
 package paquete05;
 
+import java.io.Serializable;
+
 /**
  *
  * @author reroes
  */
-public class Constructora {
+public class Constructora  implements Serializable{
      private String constructora;
     private int id;
 
-    public Constructora(String a, int s) {
-        constructora = a;
-        id = s;
+    public Constructora(String constructora, int id) {
+        this.constructora = constructora;
+        this.id = id;
     }
+
+ 
 
     public void establecerConstructora(String n) {
         constructora = n;

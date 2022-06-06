@@ -5,20 +5,22 @@
  */
 package paquete02;
 
+import java.io.Serializable;
+
 /**
  *
  * @author reroes
  */
-public class Propietario {
+public class Propietario implements Serializable {
 
     private String nombrePropietario;
     private String identificacion;
     private String apellidos;
-   
-    public Propietario(String p, String a, String i) {
-        nombrePropietario = p;
-        apellidos = a;
-        identificacion = i;
+
+    public Propietario(String nombrePropietario, String identificacion, String apellidos) {
+        this.nombrePropietario = nombrePropietario;
+        this.identificacion = identificacion;
+        this.apellidos = apellidos;
     }
 
     public void establecerNombre(String n) {
@@ -44,5 +46,13 @@ public class Propietario {
     public String obtenerIdentificacion() {
         return identificacion;
 
+    }
+
+    @Override
+    public String toString() {
+        String p = "Propietario";
+        p = String.format("%s\n Nombre: %s\n Apellido: %s\n Identificacion: %s\n", p, obtenerNombre(),
+                obtenerApellidos(), obtenerIdentificacion());
+        return p;
     }
 }

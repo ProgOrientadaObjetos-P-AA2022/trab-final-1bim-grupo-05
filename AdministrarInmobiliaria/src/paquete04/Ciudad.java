@@ -5,19 +5,22 @@
  */
 package paquete04;
 
+import java.io.Serializable;
+
 /**
  *
  * @author reroes
  */
-public class Ciudad {
+public class Ciudad implements Serializable{
     private String nombre_ciudad;
     private String provincia;
 
-    public Ciudad(String a, String s) {
-        nombre_ciudad = a;
-        provincia = s;
+    public Ciudad(String nombre_ciudad, String provincia) {
+        this.nombre_ciudad = nombre_ciudad;
+        this.provincia = provincia;
     }
 
+   
     public void establecerNombre(String n) {
         nombre_ciudad = n;
     }
@@ -32,6 +35,13 @@ public class Ciudad {
 
     public String obtenerProvincia() {
         return provincia;
+    }
+    @Override
+    public String toString(){
+        String c="Ciudad";
+        c=String.format("%s\n Nombre Ciudad: %s\n Nombre Provincia: %s\n", c, 
+                obtenerNombre(), obtenerProvincia());
+        return c;
     }
 }
 
